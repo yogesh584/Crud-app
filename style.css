@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background: #333;
+    padding: 10px;
+}
+.header >div{
+    display: flex;
+}
+.header >div h2{
+    color: #fff;
+}
+.header >div ul{
+    display: flex;
+    list-style: none;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.header >div ul li a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.header >div ul li:nth-child(1) a{
+    border-right: 1px solid #fff;
+    padding: 10px;
+}
+.header form #search{
+    height: 100%;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+}
+.header form input[value = "Search"]{
+    height: 100%;
+    width: 80px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #333;
+    border: 2px solid yellowgreen;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.header form input[value = "Search"]:hover{
+    background: yellowgreen;
+    color: #333;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 50vh;
+    margin-top: 15px;
+}
+.container #mainForm form #title{
+    height: 30px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+.container #mainForm form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.container #mainForm form label{
+    margin-top: 10px;
+}
+.container #mainForm form #descripation{
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+.container #mainForm form #submit{
+    height: 35px;
+    width: 120px;
+    margin-top: 10px;
+    background: rgb(7, 128, 209);
+    color:#fff;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container #mainForm form #submit:hover{
+    background: rgb(8, 108, 175);
+}
+.container #data{
+    width: 100%;
+    margin-top: 20px;
+}
+#numberOfEntriesToShowtoUser{
+    margin-bottom: 10px;
+}
+.container #data table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.container #data table thead th{
+    height: 40px;
+}
+.container #data table tbody tr td{
+    height: 40px;
+    text-align: center;
+}
+#alert{
+    height: 40px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: yellowgreen;
+}
+#danger{
+    height: 40px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    background: rgb(168, 30, 30);
+    color: #fff;
+}
+#alert p:nth-child(2){
+    cursor: pointer;
+    font-size: 1.4em;
+    margin-top: -4px;
+}
+#danger p:nth-child(2){
+    cursor: pointer;
+    font-size: 1.4em;
+    margin-top: -4px;
+}
+#updateNote button{
+    height: 30px;
+    background: rgb(11, 119, 207);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+#updateNote button:hover{
+    background: rgb(9, 89, 155);
+}
+#updateNote .edit{
+    width: 50px;
+    font-size: 15px;
+}
+#updateNote .delete{
+    width: 70px;
+    font-size: 15px;
+}
+
+#modalBox{
+    background: #fff;
+    z-index: 111;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 40%;
+    height: 50vh;
+    display: none;
+    transition: all 0.5s;
+}
+#modalBox #background{
+    height: 100vh;
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.22);
+    z-index: 0;
+}
+#modalBox #main-data{
+    position: absolute;
+    top: 0px;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+}
+#modalBox #main-data #cross{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#modalBox #main-data #cross h2:nth-child(2){
+    cursor: pointer;
+}
+#modalBox #main-data form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+#modalBox #main-data form #editTitle{
+    height: 30px;
+    margin-top: 5px;
+}
+#modalBox #main-data form #descriptionModelLabel{
+    margin-top: 10px;
+}
+#modalBox #main-data form #editDescripation{
+    margin-top: 5px;
+    padding:10px;
+}
+#modalBox #main-data form #editSubmit{
+    width: 130px;
+    margin-top: 10px;
+    height: 30px;
+    font-size: 18px;
+    color: #fff;
+    background: rgb(11, 119, 207);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#modalBox #main-data form #editSubmit:hover{
+    background: rgb(7, 89, 156);
+}
